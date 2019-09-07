@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vic.SportsStore.Domain.Abstract;
+using Vic.SportsStore.Domain.Concrete;
 using Vic.SportsStore.Domain.Entities;
 
 namespace Vic.SportsStore.WebApp
@@ -28,8 +29,9 @@ namespace Vic.SportsStore.WebApp
 				new Product { Name = "Running shoes", Price = 95 }
 			});
 
-			builder.RegisterInstance<IProductsRepository>(mock.Object);
-
+			//builder.RegisterInstance<IProductsRepository>(mock.Object);
+			builder.RegisterInstance<IProductsRepository>(new InMemoryProductsRepository())
+							.PropertiesAutowired();
 			var container = builder.Build();
 			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 		}
