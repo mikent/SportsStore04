@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vic.SportsStore.WebApp", "V
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vic.SportsStore.Domain", "Vic.SportsStore.Domain\Vic.SportsStore.Domain.csproj", "{82AC4C9F-498A-47F8-8029-9145BE30B45D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vic.SportsStore.UnitTests", "Vic.SportsStore.UnitTests\Vic.SportsStore.UnitTests.csproj", "{78049FFE-3C05-4D2F-917E-2B0B23EBB773}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{82AC4C9F-498A-47F8-8029-9145BE30B45D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82AC4C9F-498A-47F8-8029-9145BE30B45D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82AC4C9F-498A-47F8-8029-9145BE30B45D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78049FFE-3C05-4D2F-917E-2B0B23EBB773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78049FFE-3C05-4D2F-917E-2B0B23EBB773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78049FFE-3C05-4D2F-917E-2B0B23EBB773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78049FFE-3C05-4D2F-917E-2B0B23EBB773}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
