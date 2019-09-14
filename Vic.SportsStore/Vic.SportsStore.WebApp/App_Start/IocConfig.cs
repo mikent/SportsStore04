@@ -30,8 +30,12 @@ namespace Vic.SportsStore.WebApp
 			});
 
 			//builder.RegisterInstance<IProductsRepository>(mock.Object);
-			builder.RegisterInstance<IProductsRepository>(new InMemoryProductsRepository())
+			builder.RegisterInstance<IProductsRepository>(new EFProductRepository())
 							.PropertiesAutowired();
+
+			builder.RegisterInstance<EFDbContext>(new EFDbContext())
+							.PropertiesAutowired();
+
 			var container = builder.Build();
 			DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 		}

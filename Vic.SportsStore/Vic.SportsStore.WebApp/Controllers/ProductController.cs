@@ -20,10 +20,16 @@ namespace Vic.SportsStore.WebApp.Controllers
 		}
 		*/
 
-		public ViewResult List()
-		{
-			//return View(repository.Products);
-			return View(ProductsRepository.Products);
+		public int PageSize = 2;
+
+		public ViewResult List(int page = 1) {
+			var ret = View(
+				ProductsRepository
+				.Products.OrderBy(p => p.ProductId)
+				.Skip((page - 1) * PageSize)
+				.Take(PageSize));
+			return ret;
 		}
+
 	}
 }
