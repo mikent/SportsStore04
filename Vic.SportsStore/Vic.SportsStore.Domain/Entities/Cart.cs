@@ -50,12 +50,7 @@ namespace Vic.SportsStore.Domain.Entities
 		}
 
 
-		private ViewResult View(CartIndexViewModel cartIndexViewModel)
-		{
-			throw new NotImplementedException();
-		}
-
-		public class CartLine
+			public class CartLine
 		{
 			public Product Product { get; set; }
 			public int Quantity { get; set; }
