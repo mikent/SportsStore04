@@ -8,10 +8,12 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div class="navbar navbar-inverse" role="navigation"> 
+    <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#">
-        SPORTS STORE
+            SPORTS STORE
         </a> 
+        @Html.Action("Summary", "Cart")
+
     </div> 
     <div class="row panel"> 
         <div id="categories" class="col-xs-3">
