@@ -11,6 +11,7 @@ namespace Vic.SportsStore.WebApp
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+		public byte[] data = new byte[222];
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
