@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vic.SportsStore.Domain.Abstract;
+using Vic.SportsStore.Domain.Entities;
 using Vic.SportsStore.WebApp.Models;
 
 namespace Vic.SportsStore.WebApp.Controllers
@@ -11,6 +12,7 @@ namespace Vic.SportsStore.WebApp.Controllers
     public class ProductController : Controller
     {
 		public IProductsRepository ProductsRepository { get; set; }
+		public object Products { get; private set; }
 
 		/*
 		private IProductsRepository repository;
@@ -48,5 +50,19 @@ namespace Vic.SportsStore.WebApp.Controllers
 		return View(model);
 		}
 
+		public FileContentResult GetImage(int productId)
+		{
+			Product prod = ProductsRepository
+			.Products
+			.FirstOrDefault(p => p.ProductId == productId);
+			if (prod != null)
+			{
+				return File(prod.ImageData, prod.ImageMimeType);
+			}
+			else
+			{
+				return null;
+			}
+		}
 	}
 }
